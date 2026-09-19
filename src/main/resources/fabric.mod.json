@@ -20,6 +20,9 @@
 		],
 		"fabric-datagen": [
 			"rainy.longer.LongerDataGenerator"
+		],
+		"client": [
+			"rainy.longer.LongeClient"
 		]
 	},
 	"mixins": [

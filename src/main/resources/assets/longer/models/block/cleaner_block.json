@@ -6,6 +6,7 @@
     "north": "longer:block/cleaner_block_front",
     "south": "longer:block/machine_back",
     "east": "longer:block/machine_east",
-    "west": "longer:block/machine_west"
+    "west": "longer:block/machine_west",
+    "particle": "longer:block/cleaner_block_front"
   }
 }

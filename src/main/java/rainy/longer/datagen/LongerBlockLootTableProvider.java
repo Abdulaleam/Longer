@@ -14,6 +14,8 @@ import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
+import rainy.longer.block.CleanerBlock;
+import rainy.longer.block.LongerBlocks;
 import rainy.longer.item.LongerItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -25,6 +27,7 @@ public class LongerBlockLootTableProvider extends FabricBlockLootSubProvider {
 
     @Override
     public void generate() {
+        dropSelf(LongerBlocks.CLEANER_BLOCK);
 
         add(Blocks.STONE, createMultipleOreDrops(Blocks.STONE, LongerItems.CRUSHED_COBBLESTONE, 3, 7));
 

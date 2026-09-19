@@ -14,6 +14,8 @@ public class LongerItems {
 
     public static final Item CRUSHED_COBBLESTONE = registerItem("crushed_cobblestone", Item::new);
 
+    public static final Item WASHED_COBBLEESTONE = registerItem("washeed_cobblestone", Item::new);
+
 
 
 

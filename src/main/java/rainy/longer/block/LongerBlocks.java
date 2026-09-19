@@ -15,7 +15,7 @@ import java.util.function.Function;
 
 public class LongerBlocks {
 
-    public static final Block CLEANER_BLOCK = registerBlock("cleaner_block", Block::new);
+    public static final Block CLEANER_BLOCK = registerBlock("cleaner_block", CleanerBlock::new);
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(Longer.MOD_ID, name))));

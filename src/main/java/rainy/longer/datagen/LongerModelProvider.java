@@ -22,6 +22,7 @@ public class LongerModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
         itemModelGenerators.generateFlatItem(LongerItems.CRUSHED_COBBLESTONE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(LongerItems.WASHED_COBBLEESTONE, ModelTemplates.FLAT_ITEM);
 
 
 

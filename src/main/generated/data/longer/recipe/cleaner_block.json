@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "longer",
+  "key": {
+    "R": "minecraft:sand",
+    "X": "minecraft:oak_planks"
+  },
+  "pattern": [
+    "RRR",
+    "RXR",
+    "RRR"
+  ],
+  "result": {
+    "id": "longer:cleaner_block"
+  }
+}

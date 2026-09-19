@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import rainy.longer.datagen.LongerBlockLootTableProvider;
 import rainy.longer.datagen.LongerModelProvider;
+import rainy.longer.datagen.LongerRecipeProvider;
 
 public class LongerDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -14,6 +15,8 @@ public class LongerDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(LongerModelProvider::new);
 
 		pack.addProvider(LongerBlockLootTableProvider::new);
+
+		pack.addProvider(LongerRecipeProvider::new);
 
 	}
 }
