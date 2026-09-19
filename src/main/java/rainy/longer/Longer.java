@@ -6,6 +6,7 @@ import net.minecraft.resources.Identifier;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import rainy.longer.block.LongerBlocks;
 import rainy.longer.item.LongerGroup;
 import rainy.longer.item.LongerItems;
 
@@ -17,6 +18,7 @@ public class Longer implements ModInitializer {
 	public void onInitialize() {
 		LongerItems.registerLongerItems();
 		LongerGroup.registerCustomTabs();
+		LongerBlocks.registerLongerBlocks();
 
 
 	}

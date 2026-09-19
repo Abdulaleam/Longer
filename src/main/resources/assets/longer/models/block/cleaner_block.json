@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "longer:block/machine_bottom",
+    "up": "longer:block/machine_top",
+    "north": "longer:block/cleaner_block_front",
+    "south": "longer:block/machine_back",
+    "east": "longer:block/machine_east",
+    "west": "longer:block/machine_west"
+  }
+}

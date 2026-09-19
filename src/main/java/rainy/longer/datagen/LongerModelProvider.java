@@ -6,6 +6,7 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import rainy.longer.block.LongerBlocks;
 import rainy.longer.item.LongerItems;
 
 public class LongerModelProvider extends FabricModelProvider {

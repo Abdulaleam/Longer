@@ -8,6 +8,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import rainy.longer.Longer;
+import rainy.longer.block.LongerBlocks;
 
 public class LongerGroup {
 
@@ -17,6 +18,7 @@ public class LongerGroup {
                     .title(Component.translatable("creativemodtab.longer.longer_items"))
                     .displayItems((parameters, output) -> {
                         output.accept(LongerItems.CRUSHED_COBBLESTONE);
+                        output.accept(LongerBlocks.CLEANER_BLOCK);
 
 
 
