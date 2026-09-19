@@ -13,5 +13,6 @@ public class ModMenuTypes {
             Registry.register(BuiltInRegistries.MENU, Identifier.fromNamespaceAndPath(Longer.MOD_ID, "cleaner_menu"),
                     new ExtendedMenuType<>(CleanerMenu::new, BlockPos.STREAM_CODEC));
 
-    public static void registerModMenuTypes() {}
+    public static void registerModMenuTypes() {
+    }
 }

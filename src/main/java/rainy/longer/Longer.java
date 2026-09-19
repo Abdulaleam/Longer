@@ -10,6 +10,7 @@ import rainy.longer.block.LongerBlocks;
 import rainy.longer.entity.ModBlockEntities;
 import rainy.longer.item.LongerGroup;
 import rainy.longer.item.LongerItems;
+import rainy.longer.recipe.LongerRecipes;
 import rainy.longer.screen.ModMenuTypes;
 
 public class Longer implements ModInitializer {
@@ -23,6 +24,7 @@ public class Longer implements ModInitializer {
 		LongerBlocks.registerLongerBlocks();
 		ModBlockEntities.registerBlockEntities();
 		ModMenuTypes.registerModMenuTypes();
+		LongerRecipes.registeRecipes();
 
 
 	}

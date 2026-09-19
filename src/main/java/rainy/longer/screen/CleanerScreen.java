@@ -18,22 +18,6 @@ public class CleanerScreen extends AbstractContainerScreen<CleanerMenu> {
     public CleanerScreen(CleanerMenu menu, Inventory inventory, Component title) {
         super(menu, inventory, title);
     }
-
-    @Override
-    protected void init() {
-        super.init();
-
-        inventoryLabelX = 35;
-        titleLabelX = 35;
-    }
-
-    @Override
-    protected void extractLabels(GuiGraphicsExtractor graphics, int xm, int ym) {
-        super.extractLabels(graphics, xm, ym);
-        int x = (width - imageWidth) / 2;
-        int y = (height - imageHeight) / 2;
-    }
-
     @Override
     public void extractBackground(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float a) {
         super.extractBackground(graphics, mouseX, mouseY, a);

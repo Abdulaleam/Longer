@@ -10,6 +10,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.Containers;
@@ -19,6 +20,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -28,7 +30,12 @@ import net.minecraft.world.level.storage.ValueOutput;
 import org.jspecify.annotations.Nullable;
 import org.lwjgl.system.windows.INPUT;
 import rainy.longer.item.LongerItems;
+import rainy.longer.recipe.CleanerRecipe;
+import rainy.longer.recipe.CleanerRecipeInput;
+import rainy.longer.recipe.LongerRecipes;
 import rainy.longer.screen.CleanerMenu;
+
+import java.util.Optional;
 
 public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvider<BlockPos>, ImplementedInventory {
 
@@ -127,14 +134,21 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
     }
 
     private boolean hasRecipe() {
-        ItemStack output = new ItemStack(LongerItems.WASHED_COBBLEESTONE);
-        Item input =  LongerItems.CRUSHED_COBBLESTONE;
+        Optional <RecipeHolder<CleanerRecipe>> recipe = getCurrentRecipe();
+        if (recipe.isEmpty()) {
+            return false;
+        }
+        ItemStack output = recipe.get().value().assemble(new CleanerRecipeInput(inventory.get(INPUT_SLOT)));
 
-        boolean hasCorrectInput = inventory.get(INPUT_SLOT).is(input);
         boolean isItemOutputRight = canInsertItemIntoOutputSlot(output);
         boolean isAmountRight = canInsertAmountIntoOutputSlot(output.getCount());
 
-        return hasCorrectInput && isItemOutputRight && isAmountRight;
+        return  isItemOutputRight && isAmountRight;
+    }
+
+    private Optional<RecipeHolder<CleanerRecipe>> getCurrentRecipe() {
+        return ((ServerLevel) level).recipeAccess()
+                .getRecipeFor(LongerRecipes.CLEANER_TYPE, new CleanerRecipeInput(inventory.get(INPUT_SLOT)), level);
     }
 
     private boolean canInsertAmountIntoOutputSlot(int count) {
@@ -152,10 +166,10 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
     }
 
     private void craftItem() {
-        ItemStack output = new ItemStack(LongerItems.WASHED_COBBLEESTONE);
+        Optional<RecipeHolder<CleanerRecipe>> recipe = getCurrentRecipe();
+        ItemStack output = recipe.get().value().assemble(new CleanerRecipeInput(inventory.get(INPUT_SLOT)));
 
         inventory.set(INPUT_SLOT, inventory.get(INPUT_SLOT).copyWithCount(inventory.get(INPUT_SLOT).getCount() - 1));
-
         inventory.set(OUTPUT_SLOT, output.copyWithCount(inventory.get(OUTPUT_SLOT).getCount() + output.getCount()));
     }
 
