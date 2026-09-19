@@ -7,9 +7,11 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import rainy.longer.block.LongerBlocks;
 import rainy.longer.item.LongerItems;
+import rainy.longer.recipe.CleanerRecipeBuilder;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -33,6 +35,12 @@ public class LongerRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(LongerItems.CRUSHED_COBBLESTONE), has(LongerItems.CRUSHED_COBBLESTONE))
                         .group("longer")
                         .save(output);
+
+                CleanerRecipeBuilder.cleanerRecipe(RecipeCategory.MISC, Ingredient.of(LongerItems.CRUSHED_COBBLESTONE),
+                        LongerItems.WASHED_COBBLEESTONE, 2)
+                        .unlockedBy(getHasName(LongerItems.CRUSHED_COBBLESTONE), has(LongerItems.CRUSHED_COBBLESTONE))
+                        .save(output, "longer:washeed_cobblestone_from_cleaning");
+
 
 
 
