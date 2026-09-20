@@ -16,6 +16,10 @@ public class LongerItems {
 
     public static final Item WASHED_COBBLEESTONE = registerItem("washeed_cobblestone", Item::new);
 
+    public static final Item INFECTED_PLANKS = registerItem("infected_planks", Item::new);
+
+    public static final Item WET_PLANKS = registerItem("wet_planks", Item::new);
+
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {

@@ -1,5 +1,7 @@
 // 26.1.2	-999999999-01-01T00:00:00	Longer/LongerMod Recipes
 5bc9ee337db36deaadcce17d7cfc1457ce6cb934 data/longer/advancement/recipes/misc/cleaner_block.json
 abcb2328c2017afc9ea3ec66563970ad365cca48 data/longer/advancement/recipes/misc/washeed_cobblestone_from_cleaning.json
+6fc6d963f5db7d16ded35bcf4c9d6f04b28e36a8 data/longer/advancement/recipes/misc/wet_planks_from_cleaning.json
 f94ca5dcb08d1a2dd593d0de5d8cff96477d4257 data/longer/recipe/cleaner_block.json
-feb50ba4f02a941bb74dd7c89794e73b09697f8e data/longer/recipe/washeed_cobblestone_from_cleaning.json
+a5bb1159ca61f41820e8d14c42342e1c696dd335 data/longer/recipe/washeed_cobblestone_from_cleaning.json
+de507a0cc010db1fd198f69348622ac5799fc06f data/longer/recipe/wet_planks_from_cleaning.json

@@ -37,9 +37,15 @@ public class LongerRecipeProvider extends FabricRecipeProvider {
                         .save(output);
 
                 CleanerRecipeBuilder.cleanerRecipe(RecipeCategory.MISC, Ingredient.of(LongerItems.CRUSHED_COBBLESTONE),
-                        LongerItems.WASHED_COBBLEESTONE, 2)
+                        LongerItems.WASHED_COBBLEESTONE, 1)
                         .unlockedBy(getHasName(LongerItems.CRUSHED_COBBLESTONE), has(LongerItems.CRUSHED_COBBLESTONE))
                         .save(output, "longer:washeed_cobblestone_from_cleaning");
+
+                CleanerRecipeBuilder.cleanerRecipe(RecipeCategory.MISC, Ingredient.of(LongerItems.INFECTED_PLANKS),
+                                LongerItems.WET_PLANKS, 1)
+                        .unlockedBy(getHasName(LongerItems.INFECTED_PLANKS), has(LongerItems.INFECTED_PLANKS))
+                        .save(output, "longer:wet_planks_from_cleaning");
+
 
 
 

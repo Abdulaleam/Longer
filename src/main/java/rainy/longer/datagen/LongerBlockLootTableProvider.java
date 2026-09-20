@@ -3,6 +3,7 @@ package rainy.longer.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -31,12 +32,20 @@ public class LongerBlockLootTableProvider extends FabricBlockLootSubProvider {
 
         add(Blocks.STONE, createMultipleOreDrops(Blocks.STONE, LongerItems.CRUSHED_COBBLESTONE, 3, 7));
 
+        add(Blocks.OAK_LOG, createMultipleOreDrops(Blocks.OAK_LOG,LongerItems.INFECTED_PLANKS, 3 , 5));
+
+        add(Blocks.BIRCH_LOG, createMultipleOreDrops(Blocks.BIRCH_LOG,LongerItems.INFECTED_PLANKS, 3 , 5));
+
+        add(Blocks.SPRUCE_LOG, createMultipleOreDrops(Blocks.SPRUCE_LOG,LongerItems.INFECTED_PLANKS, 3 , 5));
+
+
     }
 
     public LootTable.Builder createMultipleOreDrops(final Block block, Item item, float minDrops, float maxDrops) {
         HolderLookup.RegistryLookup<Enchantment> enchantments = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
 
-        return this.createSilkTouchDispatchTable(block, this.applyExplosionDecay(
+
+            return this.createSilkTouchDispatchTable(block, this.applyExplosionDecay(
                 block, LootItem.lootTableItem(item)
                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrops, maxDrops)))
                         .apply(ApplyBonusCount.addOreBonusCount(enchantments.getOrThrow(Enchantments.FORTUNE)))

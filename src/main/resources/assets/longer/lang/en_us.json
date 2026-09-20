@@ -1,8 +1,12 @@
 {
-  "item.longer.crushed_cobblestone": " Crushed CobbleStone ",
+  "item.longer.crushed_cobblestone": " A Pile Of Infected CobbleStone  ",
   "item.longer.washeed_cobblestone": " Washed CobbleStone ",
+  "item.longer.infected_planks": " Infected Planks",
+  "item.longer.wet_planks" : " Wet Planks",
+
+
   "creativemodtab.longer.longer_items": "Longer Items <3",
 
-  "block.longer.cleaner_block" : " Sonic Cleaner"
+  "block.longer.cleaner_block" : " Distillation Station"
 
 }

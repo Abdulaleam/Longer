@@ -19,6 +19,8 @@ public class LongerGroup {
                     .displayItems((parameters, output) -> {
                         output.accept(LongerItems.CRUSHED_COBBLESTONE);
                         output.accept(LongerItems.WASHED_COBBLEESTONE);
+                        output.accept(LongerItems.INFECTED_PLANKS);
+                        output.accept(LongerItems.WET_PLANKS);
                         output.accept(LongerBlocks.CLEANER_BLOCK);
 
 

@@ -1,0 +1,7 @@
+{
+  "type": "longer:cleaning",
+  "ingredient": "longer:infected_planks",
+  "result": {
+    "id": "longer:wet_planks"
+  }
+}
