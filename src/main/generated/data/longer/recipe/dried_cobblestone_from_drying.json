@@ -1,6 +1,6 @@
 {
   "type": "longer:drying",
-  "ingredient": "longer:wet_planks",
+  "ingredient": "longer:washeed_cobblestone",
   "result": {
     "id": "longer:dried_cobblestone"
   }
