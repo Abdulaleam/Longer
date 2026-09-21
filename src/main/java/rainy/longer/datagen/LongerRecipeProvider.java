@@ -77,14 +77,24 @@ public class LongerRecipeProvider extends FabricRecipeProvider {
                         .save(output);
 
                 shaped(RecipeCategory.MISC, LongerItems.NETHER_PERMIT)
-                        .pattern("RRR")
-                        .pattern("RXR")
-                        .pattern("RRR")
-                        .define('R', Items.OBSIDIAN)
-                        .define('X', Items.TRIAL_KEY)
-                        .unlockedBy(getHasName(LongerItems.CRUSHED_COBBLESTONE), has(LongerItems.CRUSHED_COBBLESTONE))
-                        .group("longer")
-                        .save(output);
+                        .pattern("PPP")
+                        .pattern("OFO")
+                        .pattern("PPP")
+                        .define('P', Items.PAPER)
+                        .define('O', Items.OBSIDIAN)
+                        .define('F', Items.FLINT_AND_STEEL)
+                        .unlockedBy(getHasName(Items.OBSIDIAN), has(Items.OBSIDIAN))
+                        .save(output, "longer:nether_permit");
+
+                shaped(RecipeCategory.MISC, LongerItems.END_PERMIT)
+                        .pattern("OEO")
+                        .pattern("ENE")
+                        .pattern("OEO")
+                        .define('O', Items.OBSIDIAN)
+                        .define('E', Items.ENDER_EYE)
+                        .define('N', LongerItems.NETHER_PERMIT)
+                        .unlockedBy(getHasName(LongerItems.NETHER_PERMIT), has(LongerItems.NETHER_PERMIT))
+                        .save(output, "longer:end_permit");
 
 
                 shaped(RecipeCategory.MISC, LongerItems.ICE_SWORD)
