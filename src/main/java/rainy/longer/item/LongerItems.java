@@ -34,6 +34,8 @@ public class LongerItems {
 
     public static final Item NETHER_PERMIT = registerItem("nether_permit", Item::new, new Item.Properties().stacksTo(1));
 
+    public static final Item END_PERMIT = registerItem("end_permit", Item::new, new Item.Properties().stacksTo(1));
+
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return registerItem(name, function, new Item.Properties());
     }

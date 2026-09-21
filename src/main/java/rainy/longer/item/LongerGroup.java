@@ -30,6 +30,7 @@ public class LongerGroup {
                         output.accept(LongerBlocks.CLEANER_BLOCK);
                         output.accept(LongerBlocks.DRYING_STATION);
                         output.accept(LongerItems.NETHER_PERMIT);
+                        output.accept(LongerItems.END_PERMIT);
 
 
                     }).build());
