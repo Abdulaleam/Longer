@@ -25,14 +25,14 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 import org.jspecify.annotations.Nullable;
-import rainy.longer.recipe.CleanerRecipe;
-import rainy.longer.recipe.CleanerRecipeInput;
+import rainy.longer.recipe.DryingRecipe;
+import rainy.longer.recipe.DryingRecipeInput;
 import rainy.longer.recipe.LongerRecipes;
 import rainy.longer.screen.DryingMenu;
 
 import java.util.Optional;
 
-public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvider<BlockPos>, ImplementedInventory {
+public class DryingStationEntity extends BlockEntity implements ExtendedMenuProvider<BlockPos>, ImplementedInventory {
 
     public final NonNullList<ItemStack> inventory = NonNullList.withSize(2, ItemStack.EMPTY);
 
@@ -45,14 +45,14 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
 
 
 
-    public CleanerBlockEntity(BlockPos worldPosition, BlockState blockState) {
-        super(ModBlockEntities.CLEANER_BE, worldPosition, blockState);
+    public DryingStationEntity(BlockPos worldPosition, BlockState blockState) {
+        super(ModBlockEntities.DRYING_BE, worldPosition, blockState);
         this.data = new ContainerData() {
             @Override
             public int get(int dataId) {
                 return switch (dataId) {
-                    case 0 -> CleanerBlockEntity.this.progress;
-                    case 1 -> CleanerBlockEntity.this.maxProgress;
+                    case 0 -> DryingStationEntity.this.progress;
+                    case 1 -> DryingStationEntity.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -60,8 +60,8 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
             @Override
             public void set(int dataId, int value) {
                 switch (dataId) {
-                    case 0: CleanerBlockEntity.this.progress = value;
-                    case 1: CleanerBlockEntity.this.maxProgress = value;
+                    case 0: DryingStationEntity.this.progress = value;
+                    case 1: DryingStationEntity.this.maxProgress = value;
                 }
             }
 
@@ -85,8 +85,8 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
     @Override
     protected void saveAdditional(ValueOutput output) {
         super.saveAdditional(output);
-        output.putInt("cleaner.progress", this.progress);
-        output.putInt("cleaner.maxProgress", this.maxProgress);
+        output.putInt("drying.progress", this.progress);
+        output.putInt("drying.maxProgress", this.maxProgress);
 
         ContainerHelper.saveAllItems(output, this.inventory);
     }
@@ -94,18 +94,19 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
     @Override
     protected void loadAdditional(ValueInput input) {
         super.loadAdditional(input);
-        progress = input.getIntOr("cleaner.progress", 0);
-        maxProgress = input.getIntOr("cleaner.maxProgress", 60);
+        progress = input.getIntOr("drying.progress", 0);
+        maxProgress = input.getIntOr("drying.maxProgress", 60);
 
-         ContainerHelper.loadAllItems(input, this.inventory);
+        ContainerHelper.loadAllItems(input, this.inventory);
     }
+
     public void drop() {
         Containers.dropContents(this.level, this.worldPosition, this.inventory);
     }
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("block.longer.cleaner_block");
+        return Component.translatable("block.longer.drying_station");
     }
 
     @Override
@@ -116,7 +117,7 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
     public void tick(Level level, BlockPos pos, BlockState state) {
         if (hasRecipe() && isOutputSlotEmptyOrReceivable()) {
             increaseCraftingProgress();
-            setChanged(level, pos , state);
+            setChanged(level, pos, state);
 
             if (hasCraftingFinished()) {
                 craftItem();
@@ -129,21 +130,21 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
     }
 
     private boolean hasRecipe() {
-        Optional <RecipeHolder<CleanerRecipe>> recipe = getCurrentRecipe();
+        Optional<RecipeHolder<DryingRecipe>> recipe = getCurrentRecipe();
         if (recipe.isEmpty()) {
             return false;
         }
-        ItemStack output = recipe.get().value().assemble(new CleanerRecipeInput(inventory.get(INPUT_SLOT)));
+        ItemStack output = recipe.get().value().assemble(new DryingRecipeInput(inventory.get(INPUT_SLOT)));
 
         boolean isItemOutputRight = canInsertItemIntoOutputSlot(output);
         boolean isAmountRight = canInsertAmountIntoOutputSlot(output.getCount());
 
-        return  isItemOutputRight && isAmountRight;
+        return isItemOutputRight && isAmountRight;
     }
 
-    private Optional<RecipeHolder<CleanerRecipe>> getCurrentRecipe() {
+    private Optional<RecipeHolder<DryingRecipe>> getCurrentRecipe() {
         return ((ServerLevel) level).recipeAccess()
-                .getRecipeFor(LongerRecipes.CLEANER_TYPE, new CleanerRecipeInput(inventory.get(INPUT_SLOT)), level);
+                .getRecipeFor(LongerRecipes.DRYING_TYPE, new DryingRecipeInput(inventory.get(INPUT_SLOT)), level);
     }
 
     private boolean canInsertAmountIntoOutputSlot(int count) {
@@ -157,12 +158,11 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {
         return inventory.get(OUTPUT_SLOT).isEmpty() ||
                 inventory.get(OUTPUT_SLOT).is(output.getItem());
-
     }
 
     private void craftItem() {
-        Optional<RecipeHolder<CleanerRecipe>> recipe = getCurrentRecipe();
-        ItemStack output = recipe.get().value().assemble(new CleanerRecipeInput(inventory.get(INPUT_SLOT)));
+        Optional<RecipeHolder<DryingRecipe>> recipe = getCurrentRecipe();
+        ItemStack output = recipe.get().value().assemble(new DryingRecipeInput(inventory.get(INPUT_SLOT)));
 
         inventory.set(INPUT_SLOT, inventory.get(INPUT_SLOT).copyWithCount(inventory.get(INPUT_SLOT).getCount() - 1));
         inventory.set(OUTPUT_SLOT, output.copyWithCount(inventory.get(OUTPUT_SLOT).getCount() + output.getCount()));
@@ -196,6 +196,7 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
     public CompoundTag getUpdateTag(HolderLookup.Provider pRegistries) {
         return saveWithoutMetadata(pRegistries);
     }
+
     @Override
     public void setChanged() {
         super.setChanged();

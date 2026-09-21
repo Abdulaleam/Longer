@@ -17,6 +17,8 @@ public class LongerBlocks {
 
     public static final Block CLEANER_BLOCK = registerBlock("cleaner_block", CleanerBlock::new);
 
+    public static final Block DRYING_STATION = registerBlock("drying_station", DryingStation::new);
+
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(Longer.MOD_ID, name))));
         registerBlockItem(name, toRegister);

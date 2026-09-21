@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "longer:block/drying_station",
+    "up": "longer:block/drying_station",
+    "north": "longer:block/drying_station",
+    "south": "longer:block/drying_station",
+    "east": "longer:block/drying_station",
+    "west": "longer:block/drying_station",
+    "particle": "longer:block/drying_station"
+  }
+}

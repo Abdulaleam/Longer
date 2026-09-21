@@ -12,6 +12,8 @@ import net.minecraft.world.level.block.Blocks;
 import rainy.longer.block.LongerBlocks;
 import rainy.longer.item.LongerItems;
 import rainy.longer.recipe.CleanerRecipeBuilder;
+import rainy.longer.recipe.DryingRecipe;
+import rainy.longer.recipe.DryingRecipeBuilder;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -45,6 +47,18 @@ public class LongerRecipeProvider extends FabricRecipeProvider {
                                 LongerItems.WET_PLANKS, 1)
                         .unlockedBy(getHasName(LongerItems.INFECTED_PLANKS), has(LongerItems.INFECTED_PLANKS))
                         .save(output, "longer:wet_planks_from_cleaning");
+
+
+                DryingRecipeBuilder.dryingRecipe(RecipeCategory.MISC, Ingredient.of(LongerItems.WASHED_COBBLEESTONE),
+                                Items.COBBLESTONE, 1)
+                        .unlockedBy(getHasName(LongerItems.WASHED_COBBLEESTONE), has(LongerItems.WASHED_COBBLEESTONE))
+                        .save(output, "longer:cobblestone_from_cleaning");
+
+                DryingRecipeBuilder.dryingRecipe(RecipeCategory.MISC, Ingredient.of(LongerItems.WET_PLANKS),
+                                Items.OAK_PLANKS, 1)
+                        .unlockedBy(getHasName(LongerItems.WET_PLANKS), has(LongerItems.WET_PLANKS))
+                        .save(output, "longer:oak_planks.from_drying");
+
 
 
 

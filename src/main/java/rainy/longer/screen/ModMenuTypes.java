@@ -9,9 +9,13 @@ import net.minecraft.world.inventory.MenuType;
 import rainy.longer.Longer;
 
 public class ModMenuTypes {
-    public static final MenuType<CleanerMenu> CLEANER_MENU =
+    public static final MenuType<DryingMenu> CLEANER_MENU =
             Registry.register(BuiltInRegistries.MENU, Identifier.fromNamespaceAndPath(Longer.MOD_ID, "cleaner_menu"),
-                    new ExtendedMenuType<>(CleanerMenu::new, BlockPos.STREAM_CODEC));
+                    new ExtendedMenuType<>(DryingMenu::new, BlockPos.STREAM_CODEC));
+
+    public static final MenuType<DryingMenu> DRYING_MENU =
+            Registry.register(BuiltInRegistries.MENU, Identifier.fromNamespaceAndPath(Longer.MOD_ID, "drying_menu"),
+                    new ExtendedMenuType<>(DryingMenu::new, BlockPos.STREAM_CODEC));
 
     public static void registerModMenuTypes() {
     }

@@ -8,23 +8,25 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.Inventory;
 import rainy.longer.Longer;
 
-public class CleanerScreen extends AbstractContainerScreen<DryingMenu> {
+public class DryingScreen extends AbstractContainerScreen<DryingMenu> {
 
-    private static final Identifier GUI_TEXUTRE =
+    private static final Identifier GUI_TEXTURE =
             Identifier.fromNamespaceAndPath(Longer.MOD_ID, "textures/gui/gui.png");
 
     private static final Identifier ARROW_TEXTURE =
             Identifier.fromNamespaceAndPath(Longer.MOD_ID, "textures/gui/arrow_progress.png");
-    public CleanerScreen(DryingMenu menu, Inventory inventory, Component title) {
+
+    public DryingScreen(DryingMenu menu, Inventory inventory, Component title) {
         super(menu, inventory, title);
     }
+
     @Override
     public void extractBackground(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float a) {
         super.extractBackground(graphics, mouseX, mouseY, a);
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
-        graphics.blit(RenderPipelines.GUI_TEXTURED, GUI_TEXUTRE, x, y , 0 , 0,
-                imageWidth, imageHeight, 256 , 256);
+        graphics.blit(RenderPipelines.GUI_TEXTURED, GUI_TEXTURE, x , y , 0 , 0
+        , imageWidth, imageHeight , 256 , 256);
 
         renderProgressArrow(graphics, x , y );
 

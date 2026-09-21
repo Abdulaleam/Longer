@@ -7,6 +7,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import rainy.longer.Longer;
+import rainy.longer.block.DryingStation;
 import rainy.longer.block.LongerBlocks;
 
 public class ModBlockEntities {
@@ -15,5 +16,12 @@ public class ModBlockEntities {
                     FabricBlockEntityTypeBuilder.create(CleanerBlockEntity::new, LongerBlocks.CLEANER_BLOCK).build());
 
 
-    public static void registerBlockEntities() {    }
+    public static final BlockEntityType<DryingStationEntity> DRYING_BE =
+            Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, Identifier.fromNamespaceAndPath(Longer.MOD_ID, "drying_be"),
+                    FabricBlockEntityTypeBuilder.create(DryingStationEntity::new, LongerBlocks.DRYING_STATION).build());
+
+
+    public static void registerBlockEntities() {
+
+    }
 }
