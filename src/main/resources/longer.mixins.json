@@ -3,7 +3,7 @@
 	"package": "rainy.longer.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
-		"ExampleMixin"
+		"NetherPortalBlockMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

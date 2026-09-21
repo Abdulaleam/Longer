@@ -6,6 +6,7 @@ be8c8ea1c9b376e956af8d234bd546391250d13f data/longer/advancement/recipes/misc/dr
 19f4530d8aac572ba3157e4967e8f485aa2c3c79 data/longer/advancement/recipes/misc/dried_planks.from_drying.json
 05f1cf2751c92e646993f72d46ca2d75ec14da53 data/longer/advancement/recipes/misc/drying_station.json
 311dc4c800f6d40a6e9b874c408006fb980b7607 data/longer/advancement/recipes/misc/ice_sword.json
+65fcef5ff9dcff4e06ec0c1934b0edc224753a86 data/longer/advancement/recipes/misc/nether_permit.json
 986e9e0f662e09339337283fd32d8f03199f3944 data/longer/advancement/recipes/misc/oak_planks.json
 9aeb92b43de596fbf101b28aec40c5107876f0ad data/longer/advancement/recipes/misc/obsidian_sword.json
 fb43b0d61742528eedd56b243a0919ab170ed8df data/longer/advancement/recipes/misc/tnt_sword.json
@@ -18,6 +19,7 @@ ca6077a40a26c62f0491c5603e88f9ceef6eddbd data/longer/recipe/dirt_sword.json
 2b7dac83487ff767801c5d03186d5568666f0d4c data/longer/recipe/dried_planks.from_drying.json
 5e852c6b023cc353d1a373e5e9a995be96d30c54 data/longer/recipe/drying_station.json
 3d1288db1646eba160f280050fe950315d0f882c data/longer/recipe/ice_sword.json
+0440e8ed4c8fc06194b938ca016de073c61d2aae data/longer/recipe/nether_permit.json
 af8ef887cf0ceb780a3764513d5c887bd28492ea data/longer/recipe/oak_planks.json
 511ce666500bf25f4e0bfff11e856ed1bda693c6 data/longer/recipe/obsidian_sword.json
 c90e170840011b619320e7adde0d766b216aba12 data/longer/recipe/tnt_sword.json

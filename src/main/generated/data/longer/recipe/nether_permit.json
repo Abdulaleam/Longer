@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "longer",
+  "key": {
+    "R": "minecraft:obsidian",
+    "X": "minecraft:trial_key"
+  },
+  "pattern": [
+    "RRR",
+    "RXR",
+    "RRR"
+  ],
+  "result": {
+    "id": "longer:nether_permit"
+  }
+}

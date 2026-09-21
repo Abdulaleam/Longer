@@ -29,6 +29,7 @@ public class LongerGroup {
                         output.accept(LongerItems.DRIED_PLANKS);
                         output.accept(LongerBlocks.CLEANER_BLOCK);
                         output.accept(LongerBlocks.DRYING_STATION);
+                        output.accept(LongerItems.NETHER_PERMIT);
 
 
                     }).build());

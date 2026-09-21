@@ -76,6 +76,17 @@ public class LongerRecipeProvider extends FabricRecipeProvider {
                         .group("longer")
                         .save(output);
 
+                shaped(RecipeCategory.MISC, LongerItems.NETHER_PERMIT)
+                        .pattern("RRR")
+                        .pattern("RXR")
+                        .pattern("RRR")
+                        .define('R', Items.OBSIDIAN)
+                        .define('X', Items.TRIAL_KEY)
+                        .unlockedBy(getHasName(LongerItems.CRUSHED_COBBLESTONE), has(LongerItems.CRUSHED_COBBLESTONE))
+                        .group("longer")
+                        .save(output);
+
+
                 shaped(RecipeCategory.MISC, LongerItems.ICE_SWORD)
                         .pattern(" R ")
                         .pattern(" R ")

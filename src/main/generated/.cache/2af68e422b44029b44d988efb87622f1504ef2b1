@@ -5,6 +5,7 @@ f588a4bd29eb20e561029276e3154f81e9f1747b assets/longer/items/dirt_sword.json
 6665b2b139a836a137eb887c0ab21408a7f6fb84 assets/longer/items/dried_planks.json
 7bc530d51bacb18180878816ceb5634cb13654b4 assets/longer/items/ice_sword.json
 fda131cec614b855849a900390902f55af71dc11 assets/longer/items/infected_planks.json
+ef99f60c86d4937713f734baee8b7dae3b0fa666 assets/longer/items/nether_permit.json
 e83b205e52e5ce0e93b50a94f48675c524d0bf31 assets/longer/items/obsidian_sword.json
 afc375aa492f5e1789d1af1f99953f2aa32afe7e assets/longer/items/tnt_sword.json
 3a4b1e24072424f06da031601d86004aa8058ed6 assets/longer/items/washeed_cobblestone.json
@@ -15,6 +16,7 @@ b2a0705712069dec261c9926970d51187657e305 assets/longer/items/wet_planks.json
 fae95500ee1588661522a9df3b6ab1dbc6d9c3ea assets/longer/models/item/dried_planks.json
 56d09d6050166e845100fb2e1ac8e7f1f0e408c9 assets/longer/models/item/ice_sword.json
 cc53c9e00a058bce353a560a2afd8fd61781a97f assets/longer/models/item/infected_planks.json
+d74cf02893cbc1e95123a8fe407e27a2bf56f7a3 assets/longer/models/item/nether_permit.json
 8b225933794fc5bfa44a68159eb991b3e1e3eda1 assets/longer/models/item/obsidian_sword.json
 6dcadf7d6faea387da74df34e505973c8bbd6479 assets/longer/models/item/tnt_sword.json
 cda78190fe32f246353a37b17939be134d138689 assets/longer/models/item/washeed_cobblestone.json

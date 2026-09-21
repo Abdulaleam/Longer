@@ -6,6 +6,7 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import rainy.longer.Longer;
 import rainy.longer.block.LongerBlocks;
 import rainy.longer.item.LongerItems;
 
@@ -31,6 +32,7 @@ public class LongerModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(LongerItems.ICE_SWORD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(LongerItems.OBSIDIAN_SWORD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(LongerItems.TNT_SWORD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(LongerItems.NETHER_PERMIT, ModelTemplates.FLAT_ITEM);
 
 
 
