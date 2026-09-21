@@ -1,0 +1,7 @@
+{
+  "type": "longer:drying",
+  "ingredient": "longer:washeed_cobblestone",
+  "result": {
+    "id": "minecraft:cobblestone"
+  }
+}
