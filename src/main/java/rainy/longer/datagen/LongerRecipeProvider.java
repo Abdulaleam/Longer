@@ -196,12 +196,12 @@ public class LongerRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(LongerItems.INFECTED_PLANKS), has(LongerItems.INFECTED_PLANKS))
                         .save(output, "longer:wet_planks_from_cleaning");
 
-                CleanerRecipeBuilder.cleanerRecipe(RecipeCategory.MISC, Ingredient.of(LongerItems.WET_PLANKS),
+                DryingRecipeBuilder.dryingRecipe(RecipeCategory.MISC, Ingredient.of(LongerItems.WET_PLANKS),
                                 LongerItems.DRIED_COBBLESTONE, 1)
                         .unlockedBy(getHasName(LongerItems.CRUSHED_COBBLESTONE), has(LongerItems.CRUSHED_COBBLESTONE))
                         .save(output, "longer:dried_cobblestone_from_drying");
 
-                CleanerRecipeBuilder.cleanerRecipe(RecipeCategory.MISC, Ingredient.of(LongerItems.WET_PLANKS),
+                DryingRecipeBuilder.dryingRecipe(RecipeCategory.MISC, Ingredient.of(LongerItems.WET_PLANKS),
                                 LongerItems.DRIED_COBBLESTONE, 1)
                         .unlockedBy(getHasName(LongerItems.CRUSHED_COBBLESTONE), has(LongerItems.CRUSHED_COBBLESTONE))
                         .save(output, "longer:dried_planks.from_drying");

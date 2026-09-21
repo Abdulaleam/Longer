@@ -1,5 +1,5 @@
 {
-  "type": "longer:cleaning",
+  "type": "longer:drying",
   "ingredient": "longer:wet_planks",
   "result": {
     "id": "longer:dried_cobblestone"
