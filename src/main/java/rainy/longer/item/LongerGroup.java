@@ -14,7 +14,7 @@ public class LongerGroup {
 
     public static CreativeModeTab LONGER_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
             Identifier.fromNamespaceAndPath(Longer.MOD_ID, "longer_items"),
-            FabricCreativeModeTab.builder().icon(() -> new ItemStack(LongerItems.CRUSHED_COBBLESTONE))
+            FabricCreativeModeTab.builder().icon(() -> new ItemStack(LongerItems.END_PERMIT))
                     .title(Component.translatable("creativemodtab.longer.longer_items"))
                     .displayItems((parameters, output) -> {
                         output.accept(LongerItems.DIRT_SWORD);

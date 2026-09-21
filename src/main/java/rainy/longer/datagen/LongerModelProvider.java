@@ -33,6 +33,7 @@ public class LongerModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(LongerItems.OBSIDIAN_SWORD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(LongerItems.TNT_SWORD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(LongerItems.NETHER_PERMIT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(LongerItems.END_PERMIT,ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(LongerItems.PICKAXE_BINDING, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(LongerItems.PICKAXE_HANDLE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(LongerItems.DIAMOND_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);

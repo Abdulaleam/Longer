@@ -4,6 +4,7 @@
 f588a4bd29eb20e561029276e3154f81e9f1747b assets/longer/items/dirt_sword.json
 4a8febb985c1b24610e63ad4bd920479e60826dd assets/longer/items/dried_cobblestone.json
 6665b2b139a836a137eb887c0ab21408a7f6fb84 assets/longer/items/dried_planks.json
+9bc97f42e3c5c25248bde17f8f284c400fb5771b assets/longer/items/end_permit.json
 33767c137b9ecabd3e43599965c3d3dc0fd5cf92 assets/longer/items/gold_pickaxe_head.json
 7bc530d51bacb18180878816ceb5634cb13654b4 assets/longer/items/ice_sword.json
 fda131cec614b855849a900390902f55af71dc11 assets/longer/items/infected_planks.json
@@ -21,6 +22,7 @@ b78e05397249a41df18ce714692f5155e1b95d11 assets/longer/models/item/diamond_picka
 1e35ac2a0321bff43ffe53d7e93b40c5ba28e7f1 assets/longer/models/item/dirt_sword.json
 98b429650b11440cf7050636586bec9583409373 assets/longer/models/item/dried_cobblestone.json
 fae95500ee1588661522a9df3b6ab1dbc6d9c3ea assets/longer/models/item/dried_planks.json
+1b1248d16c3201cf6e324545e08b7c1d3ba3d74e assets/longer/models/item/end_permit.json
 83ec9aae0bc573c9888ccef94a6307a94e4ecd4e assets/longer/models/item/gold_pickaxe_head.json
 56d09d6050166e845100fb2e1ac8e7f1f0e408c9 assets/longer/models/item/ice_sword.json
 cc53c9e00a058bce353a560a2afd8fd61781a97f assets/longer/models/item/infected_planks.json
