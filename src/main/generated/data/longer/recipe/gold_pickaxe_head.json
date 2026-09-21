@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": "minecraft:gold_ingot"
+  },
+  "pattern": [
+    "RRR",
+    "R R"
+  ],
+  "result": {
+    "id": "longer:gold_pickaxe_head"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": "minecraft:stick",
+    "X": "longer:dried_planks"
+  },
+  "pattern": [
+    "R",
+    "X",
+    "R"
+  ],
+  "result": {
+    "id": "longer:pickaxe_handle"
+  }
+}

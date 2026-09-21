@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": "minecraft:diamond"
+  },
+  "pattern": [
+    "RRR",
+    "R R"
+  ],
+  "result": {
+    "id": "longer:diamond_pickaxe_head"
+  }
+}

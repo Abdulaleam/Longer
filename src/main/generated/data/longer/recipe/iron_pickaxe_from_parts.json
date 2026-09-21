@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "longer:iron_pickaxe_head",
+    "longer:pickaxe_handle",
+    "longer:pickaxe_binding"
+  ],
+  "result": {
+    "id": "minecraft:iron_pickaxe"
+  }
+}

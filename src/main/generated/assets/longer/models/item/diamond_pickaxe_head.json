@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "longer:item/diamond_pickaxe_head"
+  }
+}

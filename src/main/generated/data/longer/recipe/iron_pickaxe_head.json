@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": "minecraft:iron_ingot"
+  },
+  "pattern": [
+    "RRR",
+    "R R"
+  ],
+  "result": {
+    "id": "longer:iron_pickaxe_head"
+  }
+}

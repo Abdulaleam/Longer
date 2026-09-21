@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": "longer:dried_cobblestone"
+  },
+  "pattern": [
+    "RRR",
+    "R R"
+  ],
+  "result": {
+    "id": "longer:stone_pickaxe_head"
+  }
+}

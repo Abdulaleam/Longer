@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dried_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "longer:dried_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "longer:pickaxe_handle"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dried_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "longer:pickaxe_handle"
+    ]
+  }
+}

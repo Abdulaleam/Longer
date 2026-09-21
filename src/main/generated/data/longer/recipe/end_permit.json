@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": "minecraft:ender_eye",
+    "X": "longer:nether_permit"
+  },
+  "pattern": [
+    " R ",
+    "RXR",
+    " R "
+  ],
+  "result": {
+    "id": "longer:end_permit"
+  }
+}
