@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "longer",
+  "key": {
+    "R": "minecraft:ice",
+    "X": "minecraft:stick"
+  },
+  "pattern": [
+    " R ",
+    " R ",
+    " X "
+  ],
+  "result": {
+    "id": "longer:ice_sword"
+  }
+}

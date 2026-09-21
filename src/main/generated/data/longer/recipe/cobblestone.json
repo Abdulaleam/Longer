@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "longer",
+  "key": {
+    "R": "longer:dried_cobblestone",
+    "X": "minecraft:sugar_cane"
+  },
+  "pattern": [
+    "RXR",
+    "RXR"
+  ],
+  "result": {
+    "id": "minecraft:cobblestone"
+  }
+}

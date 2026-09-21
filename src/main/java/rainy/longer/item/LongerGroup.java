@@ -18,6 +18,9 @@ public class LongerGroup {
                     .title(Component.translatable("creativemodtab.longer.longer_items"))
                     .displayItems((parameters, output) -> {
                         output.accept(LongerItems.DIRT_SWORD);
+                        output.accept(LongerItems.ICE_SWORD);
+                        output.accept(LongerItems.OBSIDIAN_SWORD);
+                        output.accept(LongerItems.TNT_SWORD);
                         output.accept(LongerItems.CRUSHED_COBBLESTONE);
                         output.accept(LongerItems.WASHED_COBBLEESTONE);
                         output.accept(LongerItems.INFECTED_PLANKS);

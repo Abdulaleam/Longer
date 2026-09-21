@@ -24,7 +24,13 @@ public class LongerItems {
 
     public static final Item DRIED_COBBLESTONE = registerItem("dried_cobblestone", Item::new);
 
-    public static final Item DIRT_SWORD = registerItem("dirt_sword", Item::new);
+    public static final Item DIRT_SWORD = registerItem("dirt_sword", DirtySword::new);
+
+    public static final Item ICE_SWORD = registerItem("ice_sword", IceSword::new);
+
+    public static final Item OBSIDIAN_SWORD = registerItem("obsidian_sword", ObsidianSword::new);
+
+    public static final Item TNT_SWORD = registerItem("tnt_sword", TNTSword::new);
 
 
 

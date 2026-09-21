@@ -48,6 +48,63 @@ public class LongerRecipeProvider extends FabricRecipeProvider {
                         .group("longer")
                         .save(output);
 
+                shaped(RecipeCategory.MISC, Items.OAK_PLANKS)
+                        .pattern("RXR")
+                        .pattern("RXR")
+                        .define('R', LongerItems.DRIED_PLANKS)
+                        .define('X', Items.SUGAR_CANE)
+                        .unlockedBy(getHasName(LongerItems.CRUSHED_COBBLESTONE), has(LongerItems.CRUSHED_COBBLESTONE))
+                        .group("longer")
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, Items.COBBLESTONE)
+                        .pattern("RXR")
+                        .pattern("RXR")
+                        .define('R', LongerItems.DRIED_COBBLESTONE)
+                        .define('X', Items.SUGAR_CANE)
+                        .unlockedBy(getHasName(LongerItems.CRUSHED_COBBLESTONE), has(LongerItems.CRUSHED_COBBLESTONE))
+                        .group("longer")
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, LongerItems.DIRT_SWORD)
+                        .pattern(" R ")
+                        .pattern(" R ")
+                        .pattern(" X ")
+                        .define('R', Items.DIRT)
+                        .define('X', Items.STICK)
+                        .unlockedBy(getHasName(LongerItems.CRUSHED_COBBLESTONE), has(LongerItems.CRUSHED_COBBLESTONE))
+                        .group("longer")
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, LongerItems.ICE_SWORD)
+                        .pattern(" R ")
+                        .pattern(" R ")
+                        .pattern(" X ")
+                        .define('R', Items.ICE)
+                        .define('X', Items.STICK)
+                        .unlockedBy(getHasName(LongerItems.CRUSHED_COBBLESTONE), has(LongerItems.CRUSHED_COBBLESTONE))
+                        .group("longer")
+                        .save(output);
+                shaped(RecipeCategory.MISC, LongerItems.OBSIDIAN_SWORD)
+                        .pattern(" R ")
+                        .pattern(" R ")
+                        .pattern(" X ")
+                        .define('R', Items.OBSIDIAN)
+                        .define('X', Items.STICK)
+                        .unlockedBy(getHasName(LongerItems.CRUSHED_COBBLESTONE), has(LongerItems.CRUSHED_COBBLESTONE))
+                        .group("longer")
+                        .save(output);
+                shaped(RecipeCategory.MISC, LongerItems.TNT_SWORD)
+                        .pattern(" R ")
+                        .pattern(" R ")
+                        .pattern(" X ")
+                        .define('R', Items.TNT)
+                        .define('X', Items.STICK)
+                        .unlockedBy(getHasName(LongerItems.CRUSHED_COBBLESTONE), has(LongerItems.CRUSHED_COBBLESTONE))
+                        .group("longer")
+                        .save(output);
+
+
 
                 CleanerRecipeBuilder.cleanerRecipe(RecipeCategory.MISC, Ingredient.of(LongerItems.CRUSHED_COBBLESTONE),
                         LongerItems.WASHED_COBBLEESTONE, 1)

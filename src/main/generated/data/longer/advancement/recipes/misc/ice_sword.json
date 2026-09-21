@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_crushed_cobblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "longer:crushed_cobblestone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "longer:ice_sword"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_crushed_cobblestone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "longer:ice_sword"
+    ]
+  }
+}
