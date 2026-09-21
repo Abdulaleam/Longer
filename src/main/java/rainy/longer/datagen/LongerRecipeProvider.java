@@ -36,7 +36,18 @@ public class LongerRecipeProvider extends FabricRecipeProvider {
                         .define('X', Blocks.OAK_PLANKS)
                         .unlockedBy(getHasName(LongerItems.CRUSHED_COBBLESTONE), has(LongerItems.CRUSHED_COBBLESTONE))
                         .group("longer")
+
                         .save(output);
+                shaped(RecipeCategory.MISC, LongerBlocks.DRYING_STATION)
+                        .pattern("RRR")
+                        .pattern("RXR")
+                        .pattern("RRR")
+                        .define('R', LongerItems.WET_PLANKS)
+                        .define('X', LongerItems.INFECTED_PLANKS)
+                        .unlockedBy(getHasName(LongerItems.CRUSHED_COBBLESTONE), has(LongerItems.CRUSHED_COBBLESTONE))
+                        .group("longer")
+                        .save(output);
+
 
                 CleanerRecipeBuilder.cleanerRecipe(RecipeCategory.MISC, Ingredient.of(LongerItems.CRUSHED_COBBLESTONE),
                         LongerItems.WASHED_COBBLEESTONE, 1)
@@ -50,14 +61,14 @@ public class LongerRecipeProvider extends FabricRecipeProvider {
 
 
                 DryingRecipeBuilder.dryingRecipe(RecipeCategory.MISC, Ingredient.of(LongerItems.WASHED_COBBLEESTONE),
-                                Items.COBBLESTONE, 1)
+                                LongerItems.DRIED_COBBLESTONE, 1)
                         .unlockedBy(getHasName(LongerItems.WASHED_COBBLEESTONE), has(LongerItems.WASHED_COBBLEESTONE))
-                        .save(output, "longer:cobblestone_from_cleaning");
+                        .save(output, "longer:dried_cobblestone.from_drying");
 
                 DryingRecipeBuilder.dryingRecipe(RecipeCategory.MISC, Ingredient.of(LongerItems.WET_PLANKS),
-                                Items.OAK_PLANKS, 1)
+                                LongerItems.DRIED_PLANKS, 1)
                         .unlockedBy(getHasName(LongerItems.WET_PLANKS), has(LongerItems.WET_PLANKS))
-                        .save(output, "longer:oak_planks.from_drying");
+                        .save(output, "longer:dried_planks.from_drying");
 
 
 

@@ -2,6 +2,6 @@
   "type": "longer:drying",
   "ingredient": "longer:wet_planks",
   "result": {
-    "id": "minecraft:oak_planks"
+    "id": "longer:dried_planks"
   }
 }

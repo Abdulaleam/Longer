@@ -10,9 +10,10 @@ public class LongeClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
-        MenuScreens.register(ModMenuTypes.CLEANER_MENU, CleanerScreen::new);
 
         MenuScreens.register(ModMenuTypes.DRYING_MENU, DryingScreen::new);
+
+        MenuScreens.register(ModMenuTypes.CLEANER_MENU, CleanerScreen::new);
 
 
     }

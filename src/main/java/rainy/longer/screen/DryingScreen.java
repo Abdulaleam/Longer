@@ -11,10 +11,10 @@ import rainy.longer.Longer;
 public class DryingScreen extends AbstractContainerScreen<DryingMenu> {
 
     private static final Identifier GUI_TEXTURE =
-            Identifier.fromNamespaceAndPath(Longer.MOD_ID, "textures/gui/gui.png");
+            Identifier.fromNamespaceAndPath(Longer.MOD_ID, "textures/gui/drying/gui.png");
 
     private static final Identifier ARROW_TEXTURE =
-            Identifier.fromNamespaceAndPath(Longer.MOD_ID, "textures/gui/arrow_progress.png");
+            Identifier.fromNamespaceAndPath(Longer.MOD_ID, "textures/gui/drying/arrow_progress.png");
 
     public DryingScreen(DryingMenu menu, Inventory inventory, Component title) {
         super(menu, inventory, title);

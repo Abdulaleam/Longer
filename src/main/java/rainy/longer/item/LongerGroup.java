@@ -17,14 +17,15 @@ public class LongerGroup {
             FabricCreativeModeTab.builder().icon(() -> new ItemStack(LongerItems.CRUSHED_COBBLESTONE))
                     .title(Component.translatable("creativemodtab.longer.longer_items"))
                     .displayItems((parameters, output) -> {
+                        output.accept(LongerItems.DIRT_SWORD);
                         output.accept(LongerItems.CRUSHED_COBBLESTONE);
                         output.accept(LongerItems.WASHED_COBBLEESTONE);
                         output.accept(LongerItems.INFECTED_PLANKS);
                         output.accept(LongerItems.WET_PLANKS);
+                        output.accept(LongerItems.DRIED_COBBLESTONE);
+                        output.accept(LongerItems.DRIED_PLANKS);
                         output.accept(LongerBlocks.CLEANER_BLOCK);
-
-
-
+                        output.accept(LongerBlocks.DRYING_STATION);
 
 
                     }).build());

@@ -30,8 +30,8 @@ public class CleanerMenu extends AbstractContainerMenu {
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
 
-        this.addSlot(new Slot(inventory,0, 54, 34));
-        this.addSlot(new Slot(inventory,1, 104, 34) {
+        this.addSlot(new Slot(inventory, 0, 54, 34));
+        this.addSlot(new Slot(inventory, 1, 104, 34) {
             @Override
             public boolean mayPlace(ItemStack itemStack) {
                 return false;
@@ -63,31 +63,36 @@ public class CleanerMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     private static final int TE_INVENTORY_SLOT_COUNT = 2;
+
     @Override
     public ItemStack quickMoveStack(Player playerIn, int pIndex) {
         Slot sourceSlot = slots.get(pIndex);
-        if (sourceSlot == null || !sourceSlot.hasItem()) return ItemStack.EMPTY;  //EMPTY_ITEM
+        if (sourceSlot == null || !sourceSlot.hasItem()) return ItemStack.EMPTY;
+
         ItemStack sourceStack = sourceSlot.getItem();
         ItemStack copyOfSourceStack = sourceStack.copy();
 
         if (pIndex < VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT) {
-            if (!moveItemStackTo(sourceStack, TE_INVENTORY_FIRST_SLOT_INDEX, TE_INVENTORY_FIRST_SLOT_INDEX
-                    + TE_INVENTORY_SLOT_COUNT, false)) {
+            if (!moveItemStackTo(sourceStack, TE_INVENTORY_FIRST_SLOT_INDEX,
+                    TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT, false)) {
                 return ItemStack.EMPTY;
             }
         } else if (pIndex < TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT) {
-            if (!moveItemStackTo(sourceStack, VANILLA_FIRST_SLOT_INDEX, VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT, false)) {
+            if (!moveItemStackTo(sourceStack, VANILLA_FIRST_SLOT_INDEX,
+                    VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT, false)) {
                 return ItemStack.EMPTY;
             }
         } else {
             System.out.println("Invalid slotIndex:" + pIndex);
             return ItemStack.EMPTY;
         }
+
         if (sourceStack.getCount() == 0) {
             sourceSlot.set(ItemStack.EMPTY);
         } else {
             sourceSlot.setChanged();
         }
+
         sourceSlot.onTake(playerIn, sourceStack);
         return copyOfSourceStack;
     }

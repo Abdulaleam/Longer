@@ -20,6 +20,12 @@ public class LongerItems {
 
     public static final Item WET_PLANKS = registerItem("wet_planks", Item::new);
 
+    public static final Item DRIED_PLANKS = registerItem("dried_planks", Item::new);
+
+    public static final Item DRIED_COBBLESTONE = registerItem("dried_cobblestone", Item::new);
+
+    public static final Item DIRT_SWORD = registerItem("dirt_sword", Item::new);
+
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {

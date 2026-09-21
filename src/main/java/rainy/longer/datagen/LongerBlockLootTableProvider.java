@@ -38,6 +38,9 @@ public class LongerBlockLootTableProvider extends FabricBlockLootSubProvider {
 
         add(Blocks.SPRUCE_LOG, createMultipleOreDrops(Blocks.SPRUCE_LOG,LongerItems.INFECTED_PLANKS, 3 , 5));
 
+        add(Blocks.SPRUCE_LOG, createMultipleOreDrops(Blocks.IRON_ORE,LongerItems.INFECTED_PLANKS, 3 , 5));
+
+
 
     }
 

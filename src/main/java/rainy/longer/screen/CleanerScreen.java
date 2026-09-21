@@ -8,31 +8,34 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.Inventory;
 import rainy.longer.Longer;
 
-public class CleanerScreen extends AbstractContainerScreen<DryingMenu> {
+public class CleanerScreen extends AbstractContainerScreen<CleanerMenu> {
 
-    private static final Identifier GUI_TEXUTRE =
-            Identifier.fromNamespaceAndPath(Longer.MOD_ID, "textures/gui/gui.png");
+    private static final Identifier GUI_TEXTURE =
+            Identifier.fromNamespaceAndPath(Longer.MOD_ID, "textures/gui/cleaning/gui.png");
 
     private static final Identifier ARROW_TEXTURE =
-            Identifier.fromNamespaceAndPath(Longer.MOD_ID, "textures/gui/arrow_progress.png");
-    public CleanerScreen(DryingMenu menu, Inventory inventory, Component title) {
+            Identifier.fromNamespaceAndPath(Longer.MOD_ID, "textures/gui/cleaning/arrow_progress.png");
+
+    public CleanerScreen(CleanerMenu menu, Inventory inventory, Component title) {
         super(menu, inventory, title);
     }
+
     @Override
     public void extractBackground(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float a) {
         super.extractBackground(graphics, mouseX, mouseY, a);
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
-        graphics.blit(RenderPipelines.GUI_TEXTURED, GUI_TEXUTRE, x, y , 0 , 0,
-                imageWidth, imageHeight, 256 , 256);
 
-        renderProgressArrow(graphics, x , y );
+        graphics.blit(RenderPipelines.GUI_TEXTURED, GUI_TEXTURE, x, y, 0, 0,
+                imageWidth, imageHeight, 256, 256);
 
+        renderProgressArrow(graphics, x, y);
     }
-    private void renderProgressArrow(GuiGraphicsExtractor guiGraphics, int x, int y) {
+
+    private void renderProgressArrow(GuiGraphicsExtractor graphics, int x, int y) {
         if (menu.isCrafting()) {
-            guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ARROW_TEXTURE, x + 73 , y + 35 , 0 , 0 , menu.getScaledArrowProgress(),
-                    16, 24 , 16);
+            graphics.blit(RenderPipelines.GUI_TEXTURED, ARROW_TEXTURE, x + 73, y + 35, 0, 0,
+                    menu.getScaledArrowProgress(), 16, 24, 16);
         }
     }
 }

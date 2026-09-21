@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "longer:cobblestone_from_cleaning"
+        "recipe": "longer:dried_cobblestone.from_drying"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "longer:cobblestone_from_cleaning"
+      "longer:dried_cobblestone.from_drying"
     ]
   }
 }

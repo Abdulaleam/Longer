@@ -28,7 +28,7 @@ import org.jspecify.annotations.Nullable;
 import rainy.longer.recipe.CleanerRecipe;
 import rainy.longer.recipe.CleanerRecipeInput;
 import rainy.longer.recipe.LongerRecipes;
-import rainy.longer.screen.DryingMenu;
+import rainy.longer.screen.CleanerMenu;
 
 import java.util.Optional;
 
@@ -42,8 +42,6 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
     private final ContainerData data;
     private int progress = 0;
     private int maxProgress = 60;
-
-
 
     public CleanerBlockEntity(BlockPos worldPosition, BlockState blockState) {
         super(ModBlockEntities.CLEANER_BE, worldPosition, blockState);
@@ -60,8 +58,8 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
             @Override
             public void set(int dataId, int value) {
                 switch (dataId) {
-                    case 0: CleanerBlockEntity.this.progress = value;
-                    case 1: CleanerBlockEntity.this.maxProgress = value;
+                    case 0 -> CleanerBlockEntity.this.progress = value;
+                    case 1 -> CleanerBlockEntity.this.maxProgress = value;
                 }
             }
 
@@ -97,8 +95,9 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
         progress = input.getIntOr("cleaner.progress", 0);
         maxProgress = input.getIntOr("cleaner.maxProgress", 60);
 
-         ContainerHelper.loadAllItems(input, this.inventory);
+        ContainerHelper.loadAllItems(input, this.inventory);
     }
+
     public void drop() {
         Containers.dropContents(this.level, this.worldPosition, this.inventory);
     }
@@ -110,26 +109,27 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
 
     @Override
     public @Nullable AbstractContainerMenu createMenu(int containerId, Inventory inventory, Player player) {
-        return new DryingMenu(containerId, inventory, this, this.data);
+        return new CleanerMenu(containerId, inventory, this, this.data);
     }
 
     public void tick(Level level, BlockPos pos, BlockState state) {
+        if (level.isClientSide()) return;
+
         if (hasRecipe() && isOutputSlotEmptyOrReceivable()) {
             increaseCraftingProgress();
-            setChanged(level, pos , state);
+            setChanged(level, pos, state);
 
             if (hasCraftingFinished()) {
                 craftItem();
                 resetProgress();
             }
-
         } else {
             resetProgress();
         }
     }
 
     private boolean hasRecipe() {
-        Optional <RecipeHolder<CleanerRecipe>> recipe = getCurrentRecipe();
+        Optional<RecipeHolder<CleanerRecipe>> recipe = getCurrentRecipe();
         if (recipe.isEmpty()) {
             return false;
         }
@@ -138,7 +138,7 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
         boolean isItemOutputRight = canInsertItemIntoOutputSlot(output);
         boolean isAmountRight = canInsertAmountIntoOutputSlot(output.getCount());
 
-        return  isItemOutputRight && isAmountRight;
+        return isItemOutputRight && isAmountRight;
     }
 
     private Optional<RecipeHolder<CleanerRecipe>> getCurrentRecipe() {
@@ -151,17 +151,17 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
         int currentCount = inventory.get(OUTPUT_SLOT).getCount();
 
         return maxCount >= currentCount + count;
-
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {
         return inventory.get(OUTPUT_SLOT).isEmpty() ||
                 inventory.get(OUTPUT_SLOT).is(output.getItem());
-
     }
 
     private void craftItem() {
         Optional<RecipeHolder<CleanerRecipe>> recipe = getCurrentRecipe();
+        if (recipe.isEmpty()) return;
+
         ItemStack output = recipe.get().value().assemble(new CleanerRecipeInput(inventory.get(INPUT_SLOT)));
 
         inventory.set(INPUT_SLOT, inventory.get(INPUT_SLOT).copyWithCount(inventory.get(INPUT_SLOT).getCount() - 1));
@@ -169,7 +169,8 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
     }
 
     private boolean isOutputSlotEmptyOrReceivable() {
-        return inventory.get(OUTPUT_SLOT).isEmpty() || inventory.get(OUTPUT_SLOT).getCount() < inventory.get(OUTPUT_SLOT).getMaxStackSize();
+        return inventory.get(OUTPUT_SLOT).isEmpty()
+                || inventory.get(OUTPUT_SLOT).getCount() < inventory.get(OUTPUT_SLOT).getMaxStackSize();
     }
 
     private boolean hasCraftingFinished() {
@@ -183,9 +184,7 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
     private void resetProgress() {
         progress = 0;
         maxProgress = 60;
-
     }
-
 
     @Override
     public @Nullable Packet<ClientGamePacketListener> getUpdatePacket() {
@@ -196,10 +195,11 @@ public class CleanerBlockEntity extends BlockEntity implements ExtendedMenuProvi
     public CompoundTag getUpdateTag(HolderLookup.Provider pRegistries) {
         return saveWithoutMetadata(pRegistries);
     }
+
     @Override
     public void setChanged() {
         super.setChanged();
-        if(!level.isClientSide()) {
+        if (level != null && !level.isClientSide()) {
             level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
         }
     }

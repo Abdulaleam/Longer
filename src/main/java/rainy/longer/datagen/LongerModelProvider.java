@@ -25,6 +25,9 @@ public class LongerModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(LongerItems.WASHED_COBBLEESTONE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(LongerItems.INFECTED_PLANKS, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(LongerItems.WET_PLANKS, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(LongerItems.DIRT_SWORD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(LongerItems.DRIED_COBBLESTONE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(LongerItems.DRIED_PLANKS, ModelTemplates.FLAT_ITEM);
 
 
 

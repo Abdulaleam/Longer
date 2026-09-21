@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "longer:oak_planks.from_drying"
+        "recipe": "longer:dried_planks.from_drying"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "longer:oak_planks.from_drying"
+      "longer:dried_planks.from_drying"
     ]
   }
 }

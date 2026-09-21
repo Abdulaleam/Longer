@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "longer",
+  "key": {
+    "R": "longer:wet_planks",
+    "X": "longer:infected_planks"
+  },
+  "pattern": [
+    "RRR",
+    "RXR",
+    "RRR"
+  ],
+  "result": {
+    "id": "longer:drying_station"
+  }
+}
