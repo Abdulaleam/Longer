@@ -196,15 +196,17 @@ public class LongerRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(LongerItems.INFECTED_PLANKS), has(LongerItems.INFECTED_PLANKS))
                         .save(output, "longer:wet_planks_from_cleaning");
 
-                DryingRecipeBuilder.dryingRecipe(RecipeCategory.MISC, Ingredient.of(LongerItems.WASHED_COBBLEESTONE),
+                CleanerRecipeBuilder.cleanerRecipe(RecipeCategory.MISC, Ingredient.of(LongerItems.WET_PLANKS),
                                 LongerItems.DRIED_COBBLESTONE, 1)
-                        .unlockedBy(getHasName(LongerItems.WASHED_COBBLEESTONE), has(LongerItems.WASHED_COBBLEESTONE))
+                        .unlockedBy(getHasName(LongerItems.CRUSHED_COBBLESTONE), has(LongerItems.CRUSHED_COBBLESTONE))
                         .save(output, "longer:dried_cobblestone_from_drying");
 
-                DryingRecipeBuilder.dryingRecipe(RecipeCategory.MISC, Ingredient.of(LongerItems.WET_PLANKS),
-                                LongerItems.DRIED_PLANKS, 1)
-                        .unlockedBy(getHasName(LongerItems.WET_PLANKS), has(LongerItems.WET_PLANKS))
-                        .save(output, "longer:dried_planks_from_drying");
+                CleanerRecipeBuilder.cleanerRecipe(RecipeCategory.MISC, Ingredient.of(LongerItems.WET_PLANKS),
+                                LongerItems.DRIED_COBBLESTONE, 1)
+                        .unlockedBy(getHasName(LongerItems.CRUSHED_COBBLESTONE), has(LongerItems.CRUSHED_COBBLESTONE))
+                        .save(output, "longer:dried_planks.from_drying");
+
+
             }
         };
     }
