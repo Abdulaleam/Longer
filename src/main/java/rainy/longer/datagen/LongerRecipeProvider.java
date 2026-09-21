@@ -202,7 +202,7 @@ public class LongerRecipeProvider extends FabricRecipeProvider {
                         .save(output, "longer:dried_cobblestone_from_drying");
 
                 DryingRecipeBuilder.dryingRecipe(RecipeCategory.MISC, Ingredient.of(LongerItems.WET_PLANKS),
-                                LongerItems.DRIED_COBBLESTONE, 1)
+                                LongerItems.DRIED_PLANKS, 1)
                         .unlockedBy(getHasName(LongerItems.CRUSHED_COBBLESTONE), has(LongerItems.CRUSHED_COBBLESTONE))
                         .save(output, "longer:dried_planks.from_drying");
 
