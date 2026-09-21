@@ -1,6 +1,6 @@
 # Rainy's Minecraft++ (SUFFERING EDITION)
 
-GUIDE : [https://youtu.be/ofTyZ4BWF2k](https://youtu.be/ofTyZ4BWF2k)
+GUIDE : https://youtu.be/o7rsdWCMynk
 
 This mod is a Minecraft mod that adds Items that make Minecraft Take hella more time, its the perfect Mod to RageBait your Friends.
 It's Basically Minecraft++
