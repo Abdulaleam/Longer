@@ -36,6 +36,15 @@ public class LongerItems {
 
     public static final Item END_PERMIT = registerItem("end_permit", Item::new, new Item.Properties().stacksTo(1));
 
+    public static final Item PICKAXE_HANDLE = registerItem("pickaxe_handle", Item::new);
+
+    public static final Item PICKAXE_BINDING = registerItem("pickaxe_binding", Item::new);
+
+    public static final Item STONE_PICKAXE_HEAD   = registerItem("stone_pickaxe_head", Item::new);
+    public static final Item IRON_PICKAXE_HEAD    = registerItem("iron_pickaxe_head", Item::new);
+    public static final Item GOLD_PICKAXE_HEAD    = registerItem("gold_pickaxe_head", Item::new);
+    public static final Item DIAMOND_PICKAXE_HEAD = registerItem("diamond_pickaxe_head", Item::new);
+
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return registerItem(name, function, new Item.Properties());
     }

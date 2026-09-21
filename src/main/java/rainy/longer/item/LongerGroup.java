@@ -21,6 +21,12 @@ public class LongerGroup {
                         output.accept(LongerItems.ICE_SWORD);
                         output.accept(LongerItems.OBSIDIAN_SWORD);
                         output.accept(LongerItems.TNT_SWORD);
+                        output.accept(LongerItems.PICKAXE_HANDLE);
+                        output.accept(LongerItems.PICKAXE_BINDING);
+                        output.accept(LongerItems.STONE_PICKAXE_HEAD);
+                        output.accept(LongerItems.IRON_PICKAXE_HEAD);
+                        output.accept(LongerItems.GOLD_PICKAXE_HEAD);
+                        output.accept(LongerItems.DIAMOND_PICKAXE_HEAD);
                         output.accept(LongerItems.CRUSHED_COBBLESTONE);
                         output.accept(LongerItems.WASHED_COBBLEESTONE);
                         output.accept(LongerItems.INFECTED_PLANKS);

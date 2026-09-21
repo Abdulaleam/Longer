@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_crushed_cobblestone": {
+    "has_obsidian": {
       "conditions": {
         "items": [
           {
-            "items": "longer:crushed_cobblestone"
+            "items": "minecraft:obsidian"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_crushed_cobblestone"
+      "has_obsidian"
     ]
   ],
   "rewards": {

@@ -5,12 +5,21 @@
   "item.longer.wet_planks" : " Wet Planks",
   "item.longer.dried_planks": "Dried Planks",
   "item.longer.dried_cobblestone": "Dried CobbleStone",
+
   "item.longer.dirt_sword": "Dirt Sword",
   "item.longer.ice_sword": "Ice Sword",
   "item.longer.obsidian_sword": "Obsidian Sword",
   "item.longer.tnt_sword": "TNT Sword",
+
   "item.longer.nether_permit":"Nether Permit",
   "item.longer.end_permit": "End Permit",
+
+  "item.longer.pickaxe_handle": "Pickaxe Handle",
+  "item.longer.pickaxe_binding" : "Pickaxe Binding",
+  "item.longer.stone_pickaxe_head": "Stone Pickaxe Head",
+  "item.longer.iron_pickaxe_head": "Iron Pickaxe Head",
+  "item.longer.gold_pickaxe_head": "Gold Pickaxe Head",
+  "item.longer.diamond_pickaxe_head": "Diamond Pickaxe Head",
 
 
   "creativemodtab.longer.longer_items": "Longer Items <3",

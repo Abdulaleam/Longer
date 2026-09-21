@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "group": "longer",
   "key": {
-    "R": "minecraft:obsidian",
-    "X": "minecraft:trial_key"
+    "F": "minecraft:flint_and_steel",
+    "O": "minecraft:obsidian",
+    "P": "minecraft:paper"
   },
   "pattern": [
-    "RRR",
-    "RXR",
-    "RRR"
+    "PPP",
+    "OFO",
+    "PPP"
   ],
   "result": {
     "id": "longer:nether_permit"

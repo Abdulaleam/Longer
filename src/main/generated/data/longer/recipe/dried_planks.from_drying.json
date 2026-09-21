@@ -1,7 +1,0 @@
-{
-  "type": "longer:drying",
-  "ingredient": "longer:wet_planks",
-  "result": {
-    "id": "longer:dried_planks"
-  }
-}
